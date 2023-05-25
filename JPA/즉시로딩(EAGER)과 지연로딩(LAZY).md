@@ -38,7 +38,7 @@ public class Team {
 ```
 Team과 Member는 ***양방향 연관관계*** 이고, 연관관계의 주인은 Member이다. (Team 객체의 @OneToMany(mappedBy = "team") 부분 확인)
 
-Member의 fetch = FetchType.EAGER 부분을 알아보자. 참고로 @ManyToOne 의 기본 fetch 타입은 EAGER이기 때문에 때문에 생략하게되면 EAGER로 동작한다.
+Member의 fetch = FetchType.EAGER 부분을 알아보자. 참고로 @ManyToOne 의 기본 fetch 타입은 EAGER이기 때문에 때문에 생략하게되면 EAGER로 동작한다. (~ToMany에서는 Lazy, ~ToOne에서는 Eager 가 dafault 이다.)
 
 이제 예제 코드를 통해 로그를 조회해보자(EAGER).
 ```
